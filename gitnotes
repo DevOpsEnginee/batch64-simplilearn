@@ -19,4 +19,41 @@ right click and open gitbash
 8) git status
 
 9) git commit -m"first commit"    
- 
+
+10) git log --oneline   #to check all the commit
+
+
+#################################GIT IGNORE in GIT#######################
+
+11) touch error.log 
+
+12) touch .gitignore
+
+13) go to the folder and open .gitignore  and put the text : error.log 
+
+14) git add .
+
+15) git commit -m"gitignore created"
+
+15) now make some changes in error.log
+
+16) git status 
+
+
+###########################IGNORING MULTIPLE FILES IN GIT #############################
+
+17) open .gitignore and put *.log 
+
+18) git add .
+
+19) git commit -m"gitignore updated"
+
+20) now create .log files ...
+
+21) git status ...you will see no changes
+
+##################################################################
+
+
+
+
