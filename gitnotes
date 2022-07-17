@@ -1,0 +1,22 @@
+Create a folder
+go inside the folder
+right click and open gitbash
+
+1) git init   #start git in the folder 
+
+2) touch file1 file2      #it will create blank files with name file1 and file2 in your folder 
+
+3) git status     #it will tell you the status of your git in your repo 
+
+4) git add .    #add the files from working directory to staging area
+
+5) git config --global user.name "akshat"    #onetime process to give name in setting of git that who is working on 
+
+6) git config --global user.email "akshat@apicletech.com"    #one time process to give email in setting of git that who is working
+
+7) git config --list   #to check your configuration is set properly or not   #press q to exit
+
+8) git status
+
+9) git commit -m"first commit"    
+ 
