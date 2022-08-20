@@ -1,0 +1,29 @@
+1) docker run -it --name container4 -v myvol:/volume2 ubuntu /bin/bash
+
+( here myvol is volume created in host machine and volume2 is created in container which can shared with other)
+2) ls 
+3) cd volume2
+4) touch file1 
+5) exit
+6) docker volume inspect myvol
+O/p: 
+[
+    {
+        "CreatedAt": "2022-08-15T09:51:57Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/myvol/_data",   #location where myvol is created 
+        "Name": "myvol",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
+4)  docker run -it --name container5 --privileged=true --volumes-from container4 ubuntu /bin/bash
+5) ls
+6) cd volume2
+7) ls
+8) exit
+9) cd /var/lib/docker/volumes/myvol/_data     #location where volume is present in docker host machine
+10) ls
+(you will see file1) 
